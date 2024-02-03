@@ -3,7 +3,7 @@ import "./App.css";
 import Button from "./components/Button";
 import Header from "./components/Header";
 import Gif from "./components/Gif";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const apiKey = "jnN8ZhR5f1oKYwov8NicuoU1aq24hMvP";
@@ -21,11 +21,13 @@ function App() {
     setGif(data);
   };
 
+  useEffect(() => {}, []);
+
   return (
     <div className="App">
       <Header />
       <Button genGif={getGif} />
-      <Gif />
+      <Gif randomGif={gif.data.type} />
     </div>
   );
 }
