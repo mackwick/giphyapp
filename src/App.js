@@ -21,8 +21,6 @@ function App() {
     setGif(data);
   };
 
-  useEffect(() => {}, []);
-
   return (
     <div className="App">
       <Header />
