@@ -14,7 +14,7 @@ function App() {
   const getGif = async () => {
     const url =
       "https://api.giphy.com/v1/gifs/random?apikey=jnN8ZhR5f1oKYwov8NicuoU1aq24hMvP";
-    //fetch a movie
+    //fetch a gif
     const response = await fetch(url);
     //get json version of response
     const data = await response.json();
@@ -27,7 +27,7 @@ function App() {
     <div className="App">
       <Header />
       <Button genGif={getGif} />
-      <Gif randomGif={gif.data.type} />
+      <Gif randomGif={gif} />
     </div>
   );
 }
